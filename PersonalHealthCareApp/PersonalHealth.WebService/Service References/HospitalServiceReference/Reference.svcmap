@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="b9d65ae3-ce9d-43d0-b184-6182fa017cec" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>true</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.ObjectModel.ObservableCollection`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>false</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:6446/HospitalService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="HospitalService.disco" MetadataType="Disco" ID="d90a4b13-343d-4120-867f-26a848851b60" SourceId="1" SourceUrl="http://localhost:6446/HospitalService.svc?disco" />
+    <MetadataFile FileName="HospitalService.wsdl" MetadataType="Wsdl" ID="078a83b0-575d-4bd4-b430-13515535f431" SourceId="1" SourceUrl="http://localhost:6446/HospitalService.svc?wsdl" />
+    <MetadataFile FileName="HospitalService.xsd" MetadataType="Schema" ID="df8054be-466d-4279-b53e-69f03a7d7dad" SourceId="1" SourceUrl="http://localhost:6446/HospitalService.svc?xsd=xsd0" />
+    <MetadataFile FileName="HospitalService1.xsd" MetadataType="Schema" ID="83af0588-d117-406a-9a2c-aa8db41c7ed7" SourceId="1" SourceUrl="http://localhost:6446/HospitalService.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

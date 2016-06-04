@@ -1,0 +1,17 @@
+﻿<configuration>
+    <system.serviceModel>
+        <bindings>
+            <basicHttpBinding>
+                <binding name="BasicHttpBinding_IHospitalService" maxBufferSize="2147483647"
+                    maxReceivedMessageSize="2147483647">
+                    <security mode="None" />
+                </binding>
+            </basicHttpBinding>
+        </bindings>
+        <client>
+            <endpoint address="http://localhost:6446/HospitalService.svc"
+                binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_IHospitalService"
+                contract="HospitalServiceReference.IHospitalService" name="BasicHttpBinding_IHospitalService" />
+        </client>
+    </system.serviceModel>
+</configuration>
