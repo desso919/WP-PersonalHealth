@@ -5,8 +5,6 @@ VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonalHealthCareApp", "PersonalHealthCareApp\PersonalHealthCareApp.csproj", "{18579B0A-333B-4726-858E-F29DD8CE3A17}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonalHealth.WebService", "PersonalHealth.WebService\PersonalHealth.WebService.csproj", "{030B0BD5-F1C2-49AE-A7FF-0B93A331ADD6}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonalHealth.Models", "PersonalHealth.Models\PersonalHealth.Models.csproj", "{666A1404-BB96-4053-82E7-D69B3E61E281}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonalHealth.Services", "PersonalHealth.Services\PersonalHealth.Services.csproj", "{27B4F37E-9A4B-49CD-8D00-169C5DD73A57}"
@@ -41,18 +39,6 @@ Global
 		{18579B0A-333B-4726-858E-F29DD8CE3A17}.Release|x86.ActiveCfg = Release|x86
 		{18579B0A-333B-4726-858E-F29DD8CE3A17}.Release|x86.Build.0 = Release|x86
 		{18579B0A-333B-4726-858E-F29DD8CE3A17}.Release|x86.Deploy.0 = Release|x86
-		{030B0BD5-F1C2-49AE-A7FF-0B93A331ADD6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{030B0BD5-F1C2-49AE-A7FF-0B93A331ADD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{030B0BD5-F1C2-49AE-A7FF-0B93A331ADD6}.Debug|ARM.ActiveCfg = Debug|ARM
-		{030B0BD5-F1C2-49AE-A7FF-0B93A331ADD6}.Debug|ARM.Build.0 = Debug|ARM
-		{030B0BD5-F1C2-49AE-A7FF-0B93A331ADD6}.Debug|x86.ActiveCfg = Debug|x86
-		{030B0BD5-F1C2-49AE-A7FF-0B93A331ADD6}.Debug|x86.Build.0 = Debug|x86
-		{030B0BD5-F1C2-49AE-A7FF-0B93A331ADD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{030B0BD5-F1C2-49AE-A7FF-0B93A331ADD6}.Release|Any CPU.Build.0 = Release|Any CPU
-		{030B0BD5-F1C2-49AE-A7FF-0B93A331ADD6}.Release|ARM.ActiveCfg = Release|ARM
-		{030B0BD5-F1C2-49AE-A7FF-0B93A331ADD6}.Release|ARM.Build.0 = Release|ARM
-		{030B0BD5-F1C2-49AE-A7FF-0B93A331ADD6}.Release|x86.ActiveCfg = Release|x86
-		{030B0BD5-F1C2-49AE-A7FF-0B93A331ADD6}.Release|x86.Build.0 = Release|x86
 		{666A1404-BB96-4053-82E7-D69B3E61E281}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{666A1404-BB96-4053-82E7-D69B3E61E281}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{666A1404-BB96-4053-82E7-D69B3E61E281}.Debug|ARM.ActiveCfg = Debug|ARM

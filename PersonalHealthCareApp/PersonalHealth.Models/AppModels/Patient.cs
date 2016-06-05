@@ -1,10 +1,11 @@
-﻿using System;
+﻿using Personal.Health.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PersonalHealth.Models.AppModels
+namespace Hospital.Models
 {
     public class Patient
     {
@@ -24,13 +25,7 @@ namespace PersonalHealth.Models.AppModels
 
         public string Gender { get; set; }
 
-        public int Age { get; set; }
-
         public string BirhtDate { get; set; }
-
-        public string FullName
-        {
-            get { return string.Format("{0} {1} {2}", FirstName, SecondName, LastName); }
-        }
+    
     }
 }

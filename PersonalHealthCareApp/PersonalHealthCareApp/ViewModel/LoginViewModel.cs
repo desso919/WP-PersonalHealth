@@ -1,4 +1,7 @@
-﻿using PersonalHealthCareApp.Common;
+﻿using Hospital.Models;
+using Newtonsoft.Json;
+using PersonalHealthCareApp.Common;
+using PersonalHealthCareApp.View;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -8,12 +11,16 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using Windows.UI.Xaml;
+using Windows.UI.Xaml.Controls;
 
 namespace PersonalHealthCareApp.ViewModel
 {
     public class LoginViewModel : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
+        public const string EMPTY_JSON = "{}";
+        private string loginStatus;
         private string username;
         private string password;
 
@@ -52,6 +59,20 @@ namespace PersonalHealthCareApp.ViewModel
             }
         }
 
+     
+        public string LoginStatus
+        {
+            get
+            {
+                return loginStatus;
+            }
+            set
+            {
+                loginStatus = value;
+                NotifyPropertyChanged();
+            }
+        }
+
         private void NotifyPropertyChanged([CallerMemberName] string propName = "")
         {
             if (PropertyChanged != null)
@@ -60,7 +81,6 @@ namespace PersonalHealthCareApp.ViewModel
 
             }
         }
-
 
         private ICommand toggleExecuteCommand { get; set; }
 
@@ -90,14 +110,28 @@ namespace PersonalHealthCareApp.ViewModel
 
         public async void LoginPatient()
         {
-           string patient = await LoginPatientAsync();
+           string response = await LoginPatientAsync();
+           response = response.TrimStart('\"');
+           response = response.TrimEnd('\"');
+           response = response.Replace("\\", "");
 
+           if (response.Equals(EMPTY_JSON) || Username == null || Password == null )
+           {
+               LoginStatus = "Invalid username or password";
+           }
+           else
+           {
+               Patient user = JsonConvert.DeserializeObject<Patient>(response);
+               LoggedInPatient.Init(user);
+
+               ((Frame)Window.Current.Content).Navigate(typeof(HomeView));
+           }           
         }
 
         public async Task<string> LoginPatientAsync()
         {
             HttpClient http = new HttpClient();
-            var myRequest = new HttpRequestMessage(HttpMethod.Get, "http://localhost:6446/HospitalService.svc/patient/1");
+            var myRequest = new HttpRequestMessage(HttpMethod.Get, "http://localhost:6446/HospitalService.svc/patient/" + Username + "/password/" + Password);
             var resp = await http.SendAsync(myRequest);
             return await resp.Content.ReadAsStringAsync();
         }

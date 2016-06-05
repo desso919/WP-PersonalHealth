@@ -86,7 +86,13 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Interfaces\IDoctorService.cs" />
+    <Compile Include="Interfaces\IHistoryService.cs" />
+    <Compile Include="Interfaces\IHospitalService.cs" />
     <Compile Include="Interfaces\IPatientService.cs" />
+    <Compile Include="Interfaces\IRecommendedVisitationService.cs" />
+    <Compile Include="Interfaces\ITemplateService.cs" />
+    <Compile Include="Interfaces\IVisitationService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '12.0' ">

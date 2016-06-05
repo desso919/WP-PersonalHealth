@@ -80,10 +80,34 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
+    <ProjectReference Include="..\PersonalHealth.Models\PersonalHealth.Models.csproj">
+      <Project>{666a1404-bb96-4053-82e7-d69b3e61e281}</Project>
+      <Name>PersonalHealth.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PersonalHealth.Services\PersonalHealth.Services.csproj">
+      <Project>{27b4f37e-9a4b-49cd-8d00-169c5dd73a57}</Project>
+      <Name>PersonalHealth.Services</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Impl\DoctorService.cs" />
+    <Compile Include="Impl\HistoryService.cs" />
+    <Compile Include="Impl\HospitalService.cs" />
     <Compile Include="Impl\PatientService.cs" />
+    <Compile Include="Impl\RecommendedVisitationService.cs" />
+    <Compile Include="Impl\ServicesUtils.cs" />
+    <Compile Include="Impl\TemplateServcie.cs" />
+    <Compile Include="Impl\VisitationService.cs" />
+    <Compile Include="Impl\WebService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.8.0.3\lib\portable-net40+sl5+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '12.0' ">
     <VisualStudioVersion>12.0</VisualStudioVersion>

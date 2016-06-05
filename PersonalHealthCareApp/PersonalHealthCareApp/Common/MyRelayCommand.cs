@@ -1,0 +1,56 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Input;
+
+namespace PersonalHealthCareApp.Common
+{
+    public class MyRelayCommand : ICommand
+    {
+         private Action<object> execute;
+
+        private Predicate<object> canExecute;
+
+        private event EventHandler CanExecuteChangedInternal;
+
+        public MyRelayCommand(Action<object> execute)
+            : this(execute, DefaultCanExecute)
+        {
+        }
+
+        public MyRelayCommand(Action<object> execute, Predicate<object> canExecute)
+        {
+            if (execute == null)
+            {
+                throw new ArgumentNullException("execute");
+            }
+
+            if (canExecute == null)
+            {
+                throw new ArgumentNullException("canExecute");
+            }
+
+            this.execute = execute;
+            this.canExecute = canExecute;
+        }
+
+        public event EventHandler CanExecuteChanged;
+
+        public bool CanExecute(object parameter)
+        {
+            return true;
+        }
+
+        public void Execute(object parameter)
+        {
+            this.execute(parameter);
+        }
+
+        private static bool DefaultCanExecute(object parameter)
+        {
+            return true;
+        }
+    }
+}

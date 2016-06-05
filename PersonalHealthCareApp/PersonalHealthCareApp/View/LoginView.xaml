@@ -36,11 +36,11 @@
 
             <StackPanel VerticalAlignment="Center" Width="300">
                 <TextBlock Text="Username or EGN:"/>
-                <TextBox Text="{Binding Path=Username}"/>
+                <TextBox Text="{Binding Path=Username, Mode=TwoWay}" />
                 <TextBlock Text="Password:"/>
-                <PasswordBox Password="{Binding Path=Password}"/>
-                <Button Name="btnLogin" Content="Login" Command="{Binding LoginCommand}"  HorizontalAlignment="Stretch" Margin="5,5"/>              
-                <TextBlock Text="{Binding LoginStatus}"/>
+                <PasswordBox Password="{Binding Path=Password, Mode=TwoWay}"/>
+                <Button Name="btnLogin" Content="Login" Command="{Binding LoginCommand}"  HorizontalAlignment="Stretch" Margin="5,5"/>
+                <TextBlock Text="{Binding LoginStatus}" Foreground="Red" Style="{ThemeResource TitleTextBlockStyle}"/>
             </StackPanel>
             
         </Grid>

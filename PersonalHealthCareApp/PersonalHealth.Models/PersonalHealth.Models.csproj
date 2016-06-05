@@ -82,7 +82,16 @@
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AppModels\Doctor.cs" />
+    <Compile Include="AppModels\History.cs" />
+    <Compile Include="AppModels\HospitalModel.cs" />
     <Compile Include="AppModels\Patient.cs" />
+    <Compile Include="AppModels\RecommendedVisitation.cs" />
+    <Compile Include="AppModels\RegistrationFormModel.cs" />
+    <Compile Include="AppModels\ScheduledVisitation.cs" />
+    <Compile Include="AppModels\Template.cs" />
+    <Compile Include="AppModels\Utill.cs" />
+    <Compile Include="AppModels\VisitationFormModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '12.0' ">
